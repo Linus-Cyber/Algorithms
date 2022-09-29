@@ -1,5 +1,3 @@
-from pprint import pprint
-
 class SudokuSolver():
     def __init__(self, grid):
         self.grid = grid
@@ -23,7 +21,6 @@ class SudokuSolver():
             if 0 in row:
                 empty = (i, row.index(0))
                 break
-        
         if not empty:
             return self.grid
         row, column = empty
@@ -36,13 +33,4 @@ class SudokuSolver():
             else:
                 self.grid[row][column] = 0
         return None
-sudoku = SudokuSolver([ [1,0,0,0,0,4,5,6,0],
-                        [0,0,0,0,0,0,0,0,0],
-                        [0,0,0,0,0,0,0,0,0],
-                        [0,0,0,0,0,0,0,0,0],
-                        [0,0,0,0,0,0,0,0,0],
-                        [0,0,0,0,0,0,0,0,0],
-                        [0,0,0,0,0,0,0,0,0],
-                        [0,0,0,0,0,0,0,0,0],
-                        [0,0,0,0,0,0,0,0,0],])
-pprint(sudoku.solve())
+
